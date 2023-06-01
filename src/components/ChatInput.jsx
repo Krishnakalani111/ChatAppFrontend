@@ -36,7 +36,7 @@ export default function ChatInput({ handleSendMsg }) {
       <form className="input-container" onSubmit={(event) => sendChat(event)}>
         <input
           type="text"
-          placeholder="type your message here"
+          placeholder="type here"
           onChange={(e) => setMsg(e.target.value)}
           value={msg}
         />
@@ -54,9 +54,9 @@ const Container = styled.div`
   grid-template-columns: 5% 95%;
   background-color: #080420;
   padding: 0 2rem;
-  @media screen and (min-width: 720px) and (max-width: 1080px) {
-    padding: 0 1rem;
-    gap: 1rem;
+  @media screen and (min-width:360px) and (max-width: 1080px) {
+    grid-template-columns: 0 3;
+    gap: 0.2rem;
   }
   .button-container {
     display: flex;
@@ -95,8 +95,13 @@ const Container = styled.div`
         .emoji-group:before {
           background-color: #080420;
         }
+        @media screen and (min-width: 360px) and (max-width: 1080px) {
+      
+          left:10px;
+    }
       }
     }
+    
   }
   .input-container {
     width: 100%;
@@ -120,6 +125,11 @@ const Container = styled.div`
       &:focus {
         outline: none;
       }
+       @media screen and (min-width: 360px) and (max-width: 1080px) {
+        width:100%;
+        padding-left: 0.5rem;
+        
+      }
     }
     button {
       padding: 0.3rem 2rem;
@@ -129,10 +139,13 @@ const Container = styled.div`
       align-items: center;
       background-color: #9a86f3;
       border: none;
-      @media screen and (min-width: 720px) and (max-width: 1080px) {
-        padding: 0.3rem 1rem;
+      @media screen and (min-width: 360px) and (max-width: 1080px) {
+        
+        border-radius: 0.5rem;
+        
+
         svg {
-          font-size: 1rem;
+          font-size: 0.5rem;
         }
       }
       svg {

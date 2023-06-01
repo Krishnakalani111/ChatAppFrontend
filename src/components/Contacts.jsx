@@ -42,7 +42,7 @@ export default function Contacts({ contacts, changeChat }) {
                     />
                   </div>
                   <div className="username">
-                    <h3>{contact.username}</h3>
+                    <h4>{contact.username}</h4>
                   </div>
                 </div>
               );
@@ -80,6 +80,12 @@ const Container = styled.div`
     h3 {
       color: white;
       text-transform: uppercase;
+      @media screen and (min-width: 360px) and (max-width: 1080px) {
+      font-size:0.5rem;
+    }
+    }
+    @media screen and (min-width: 360px) and (max-width: 1080px) {
+      visibility: hidden;
     }
   }
   .contacts {
@@ -113,10 +119,14 @@ const Container = styled.div`
         }
       }
       .username {
-        h3 {
-          color: white;
+        h4 {
+          color: #d6d5d5;
         }
       }
+      @media screen and (min-width: 360px) and (max-width: 1080px) {
+      padding:0.1rem;
+      height: 1rem;
+    }
     }
     .selected {
       background-color: #9a86f3;
@@ -140,13 +150,8 @@ const Container = styled.div`
         color: white;
       }
     }
-    @media screen and (min-width: 720px) and (max-width: 1080px) {
-      gap: 0.5rem;
-      .username {
-        h2 {
-          font-size: 1rem;
-        }
-      }
+    @media screen and (min-width: 360px) and (max-width: 1080px) {
+      visibility: hidden;
     }
   }
 `;

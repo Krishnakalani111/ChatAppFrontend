@@ -76,8 +76,12 @@ const Container = styled.div`
     background-color: #00000076;
     display: grid;
     grid-template-columns: 25% 75%;
-    @media screen and (min-width: 720px) and (max-width: 1080px) {
-      grid-template-columns: 35% 65%;
+    @media screen and (min-width: 360px) and (max-width: 1080px) {
+      display: flex;
+      flex-direction: column;
+      height:100vh;
+      width:95vw;
+
     }
   }
 `;

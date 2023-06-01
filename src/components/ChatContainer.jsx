@@ -112,8 +112,10 @@ const Container = styled.div`
   grid-template-rows: 10% 80% 10%;
   gap: 0.1rem;
   overflow: hidden;
-  @media screen and (min-width: 720px) and (max-width: 1080px) {
-    grid-template-rows: 15% 70% 15%;
+  @media screen and (min-width: 360px) and (max-width: 1080px) {
+    grid-template-rows: 5% 70% 10%;
+    height: 150%;
+    overflow: visible;
   }
   .chat-header {
     display: flex;
@@ -134,6 +136,9 @@ const Container = styled.div`
           color: white;
         }
       }
+    }
+    @media screen and (min-width: 360px) and (max-width: 1080px) {
+      padding:0 1rem;
     }
   }
   .chat-messages {
@@ -160,7 +165,7 @@ const Container = styled.div`
         font-size: 1.1rem;
         border-radius: 1rem;
         color: #d1d1d1;
-        @media screen and (min-width: 720px) and (max-width: 1080px) {
+        @media screen and (min-width: 360px) and (max-width: 1080px) {
           max-width: 70%;
         }
       }
