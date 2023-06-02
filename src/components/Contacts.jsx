@@ -69,6 +69,11 @@ const Container = styled.div`
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
   background-color: #080420;
+  @media screen and (min-width: 360px) and (max-width: 1080px) {
+      height:100%;
+      margin-top: 5.5rem;
+      
+    }
   .brand {
     display: flex;
     align-items: center;
@@ -125,7 +130,7 @@ const Container = styled.div`
       }
       @media screen and (min-width: 360px) and (max-width: 1080px) {
       padding:0.1rem;
-      height: 1rem;
+      
     }
     }
     .selected {

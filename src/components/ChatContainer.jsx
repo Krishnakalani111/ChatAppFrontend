@@ -115,7 +115,8 @@ const Container = styled.div`
   @media screen and (min-width: 360px) and (max-width: 1080px) {
     grid-template-rows: 5% 70% 10%;
     height: 150%;
-    overflow: visible;
+    overflow: hidden;
+
   }
   .chat-header {
     display: flex;
@@ -138,7 +139,7 @@ const Container = styled.div`
       }
     }
     @media screen and (min-width: 360px) and (max-width: 1080px) {
-      padding:0 1rem;
+      margin-top: 30px;
     }
   }
   .chat-messages {
@@ -147,6 +148,9 @@ const Container = styled.div`
     flex-direction: column;
     gap: 1rem;
     overflow: auto;
+    @media screen and (min-width: 360px) and (max-width: 1080px) {
+      overflow:scroll;
+    }
     &::-webkit-scrollbar {
       width: 0.2rem;
       &-thumb {
@@ -166,7 +170,8 @@ const Container = styled.div`
         border-radius: 1rem;
         color: #d1d1d1;
         @media screen and (min-width: 360px) and (max-width: 1080px) {
-          max-width: 70%;
+          max-width: 50%;
+          
         }
       }
     }

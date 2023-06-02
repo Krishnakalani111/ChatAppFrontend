@@ -36,7 +36,7 @@ export default function Chat() {
     if (currentUser) {
       if (currentUser.isAvatarImageSet) {
         const data = await axios.get(`${allUsersRoute}/${currentUser._id}`);
-        setContacts(data.data);
+        setContacts(data.data.reverse());
       } else {
         navigate("/setAvatar");
       }
@@ -68,6 +68,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  @media screen and (min-width: 360px) and (max-width: 1080px) {
+      
+    }
   align-items: center;
   background-color: #131324;
   .container {
@@ -79,8 +82,9 @@ const Container = styled.div`
     @media screen and (min-width: 360px) and (max-width: 1080px) {
       display: flex;
       flex-direction: column;
-      height:100vh;
-      width:95vw;
+      
+      height:110vh;
+      width:98vw;
 
     }
   }

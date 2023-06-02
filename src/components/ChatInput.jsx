@@ -65,6 +65,9 @@ const Container = styled.div`
     gap: 1rem;
     .emoji {
       position: relative;
+      @media screen and (min-width: 360px) and (max-width: 1080px) {
+      margin-left:-12px;
+    }
       svg {
         font-size: 1.5rem;
         color: #ffff00c8;
@@ -96,8 +99,8 @@ const Container = styled.div`
           background-color: #080420;
         }
         @media screen and (min-width: 360px) and (max-width: 1080px) {
-      
-          left:10px;
+          position: absolute;
+          left: 0rem;
     }
       }
     }

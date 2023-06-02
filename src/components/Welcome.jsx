@@ -27,6 +27,9 @@ const Container = styled.div`
   align-items: center;
   color: white;
   flex-direction: column;
+  @media screen and (min-width: 360px) and (max-width: 1080px) {
+      margin-bottom:2rem;
+    }
   img {
     height: 20rem;
   }
